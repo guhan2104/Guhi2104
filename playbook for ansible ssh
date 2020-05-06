@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: copy war onto tomcat servers
+      copy:
+          src: /home/ansadmin/target/java-tomcat-maven-example.war
+          dest: /opt/tomcat/apache-tomcat-8.5.54/webapps
